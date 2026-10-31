@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Play Time">
+  <meta name="theme-color" content="#2b1d5c">
+  <title>Play Time</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="stage"></main>
+
+  <!-- Hidden parent exit: hold this corner for 3 seconds during a game -->
+  <div id="parent-corner" aria-label="Grown-up exit" hidden>
+    <svg viewBox="0 0 40 40" class="ring"><circle cx="20" cy="20" r="17"></circle></svg>
+    <span class="lock">🔒</span>
+  </div>
+
+  <div id="gate" hidden>
+    <div class="gate-card">
+      <p class="gate-title">Grown-ups only</p>
+      <p class="gate-question"></p>
+      <div class="gate-answers"></div>
+      <button class="gate-cancel">Back to playing</button>
+    </div>
+  </div>
+
+  <div id="fx"></div>
+  <script src="app.js"></script>
+</body>
+</html>
